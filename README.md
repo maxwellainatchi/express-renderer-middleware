@@ -1,8 +1,17 @@
 # `express-renderer-middleware`
-[![CircleCI](https://circleci.com/gh/maxwellainatchi/express-renderer-middleware.svg?style=svg)](https://circleci.com/gh/maxwellainatchi/express-renderer-middleware)
-
 
 Middleware for [Express.JS](https://expressjs.com/) which allows for automatic template engine rendering.
+
+[![npm](https://img.shields.io/npm/v/express-renderer-middleware.svg?style=flat-square)](https://www.npmjs.com/package/express-renderer-middleware)
+
+[![GitHub license](https://img.shields.io/github/license/maxwellainatchi/express-renderer-middleware.svg?style=flat-square)](https://github.com/maxwellainatchi/express-renderer-middleware)
+[![GitHub issues](https://img.shields.io/github/issues/maxwellainatchi/express-renderer-middleware.svg?style=social)](https://github.com/maxwellainatchi/express-renderer-middleware/issues)
+[![GitHub forks](https://img.shields.io/github/forks/maxwellainatchi/express-renderer-middleware.svg?style=social)](https://github.com/maxwellainatchi/express-renderer-middleware/network)
+[![GitHub stars](https://img.shields.io/github/stars/maxwellainatchi/express-renderer-middleware.svg?style=social)](https://github.com/maxwellainatchi/express-renderer-middleware/stargazers)
+
+![CircleCI](https://img.shields.io/circleci/project/github/maxwellainatchi/express-renderer-middleware.svg?style=flat-square)
+![David](https://img.shields.io/david/maxwellainatchi/express-renderer-middleware.svg?style=flat-square)
+![David](https://img.shields.io/david/dev/maxwellainatchi/express-renderer-middleware.svg?style=flat-square)
 
 **WARNING**: I have not yet been able to figure out the file extension dynamically from Express. I'm using the name of the engine for now (works with pug, ejs, and some others, but fails on some engines, including _placeholder_). If your engine's file extension does not match its name, please pass the `ext` option.
 
