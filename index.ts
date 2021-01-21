@@ -1,27 +1,33 @@
-let Express = require("express");
-let fs = require("fs");
-let path = require("path");
+import Express from "express";
+import * as fs from "fs";
+import * as path from "path";
 
-module.exports = (options) => {
-	options = options || {};
+interface Options {
+	vars?: any;
+	logging?: boolean;
+	dir?: string;
+	ext?: string;
+}
+
+const renderStatic = (options: Options = {}) => {
 	options.vars = options.vars || {};
 
-	let log = (...msgs) => {
+	let log = (...msgs: any[]) => {
 		if (options.logging) {
 			console.log(...msgs);
 		}
 	};
 	let router = Express.Router();
-	router.get("*", (req, res, next) => {
+	router.get("*", (req: Express.Request, res: Express.Response, next: Express.NextFunction) => {
 		let url = req.originalUrl;
-		let render = file => res.render(file, options.vars);
+		let render = (file: string) => res.render(file, options.vars);
 
 		// Normalize ext/dir
-		dir = options.dir || req.app.get("views") || "./views";
+		let dir = options.dir || req.app.get("views") || "./views";
 		if (!path.isAbsolute(dir)) {
 			dir = path.normalize(`./${dir}`);
 		}
-		ext = options.ext || req.app.get("view engine") || "pug";
+		let ext = options.ext || req.app.get("view engine") || "pug";
 		if (ext.startsWith(".")) { ext = ext.substring(1); }
 
 		// Render index
@@ -54,3 +60,6 @@ module.exports = (options) => {
 	});
 	return router;
 };
+
+export default renderStatic;
+export { renderStatic };
