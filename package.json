@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
-    "format": "prettier",
+    "format": "prettier --write .",
     "test": "mocha ./test"
   },
   "dependencies": {

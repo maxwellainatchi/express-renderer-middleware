@@ -1,12 +1,12 @@
 {
-    "compilerOptions": {
-        "target": "es2019",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "strict": true,
-        "inlineSources": true,
-        "sourceMap": true,
-        "esModuleInterop": true,
-        "noUnusedLocals": true
-    },
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "inlineSources": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true
+  }
 }
